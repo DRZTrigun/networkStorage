@@ -25,7 +25,7 @@ public class NettyClient {
                 @Override
                         public void initChannel(SocketChannel ch) {
                     ch.pipeline().addLast(new ObjectEncoder(), new ObjectDecoder(150*1024*1024,
-                            ClassResolvers.cacheDisabled(null)),new ClientHandler());
+                            ClassResolvers.cacheDisabled(null)),new ClientHandler(clientHandler));
                 }
             });
             ChannelFuture channelFuture = b.connect(host, port).sync();
@@ -35,4 +35,5 @@ public class NettyClient {
             workerGroup.shutdownGracefully();
         }
     }
+
 }
