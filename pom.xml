@@ -11,6 +11,7 @@
     <modules>
         <module>nettyServer</module>
         <module>client</module>
+        <module>JettyServer</module>
 
     </modules>
 
