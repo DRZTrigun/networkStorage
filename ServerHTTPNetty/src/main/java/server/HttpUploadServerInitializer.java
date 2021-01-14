@@ -23,7 +23,6 @@ public class HttpUploadServerInitializer extends ChannelInitializer<SocketChanne
         }
         pipeline.addLast(new HttpRequestDecoder());
         pipeline.addLast(new HttpResponseEncoder());
-
         pipeline.addLast(new HttpUploadServerHandler());
     }
 }

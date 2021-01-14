@@ -8,7 +8,6 @@ import io.netty.util.CharsetUtil;
 public class HttpUploadClientHandler extends SimpleChannelInboundHandler<HttpObject> {
 
     private boolean readingChunks;
-
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
         if (msg instanceof HttpResponse){

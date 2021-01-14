@@ -48,13 +48,6 @@ public class HttpUploadServerHandler extends SimpleChannelInboundHandler<HttpObj
         // системный временный каталог
     }
 
-//    @Override
-//    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-//        if (decoder !=null){
-//            decoder.cleanFiles();
-//        }
-//    }
-
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();

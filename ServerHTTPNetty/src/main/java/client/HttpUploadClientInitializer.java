@@ -25,7 +25,6 @@ public class HttpUploadClientInitializer extends ChannelInitializer<SocketChanne
         pipeline.addLast("codec", new HttpClientCodec());
 
         pipeline.addLast("chuckWriter", new ChunkedWriteHandler());
-
         pipeline.addLast("handler", new HttpUploadClientHandler());
     }
 }
